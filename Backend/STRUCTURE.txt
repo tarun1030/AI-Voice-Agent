@@ -1,0 +1,27 @@
+voice-ai-backend/
+├── app/
+│   ├── __init__.py                  # App package init
+│   ├── main.py                      # FastAPI application & routes
+│   ├── config.py                    # Configuration & settings
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── schemas.py               # Pydantic data models
+│   └── services/
+│       ├── __init__.py
+│       ├── knowledge_base.py        # FAISS vector store + embeddings
+│       ├── llm_service.py           # Gemini Flash 2.5 integration
+│       ├── stt_service.py           # Speech-to-text (Deepgram)
+│       ├── tts_service.py           # Text-to-speech (Google TTS)
+│       ├── livekit_service.py       # LiveKit room & token management
+│       └── voice_agent.py           # Pipeline orchestrator (STT→LLM→TTS)
+├── data/                            # Vector store & metadata (created at runtime)
+├── uploads/                         # Uploaded documents (created at runtime)
+├── requirements.txt                 # Python dependencies
+├── Dockerfile                       # Docker container config
+├── docker-compose.yml               # Multi-container orchestration
+├── .env.example                     # Environment variables template
+├── .gitignore                       # Git ignore patterns
+├── setup.sh                         # Quick setup script
+└── README.md                        # Documentation
+
+Total Files: 18 code files + 1 setup script + 1 README
